@@ -11,23 +11,16 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
   
       // 🚨 Get input values
-      const studentNameInput = document.getElementById('studentName');
-      const personalMessageInput = ;
-      const courseNameInput = ; 
+      const [studentNameInput, personalMessageInput, courseNameInput] = ['studentName', 'personalMessage', 'courseName'].map(elementId => document.getElementById(elementId));
   
       const studentName = studentNameInput.value;
       const personalMessage = personalMessageInput.value;
-      const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
+      const courseName = courseNameInput ? courseNameInput.value : "a Course"; // Fallback to "a course" if no input
   
-      if (studentName.trim() === '' || personalMessage.trim() === '') {
+      if (studentName.trim() === '' || personalMessage.trim() === '' || courseName.trim() === '') {
         alert('Please fill in all fields');
         return;
       }
-  
-      // 🚨 Generate certificate content dynamically
-      certificateContent. = `
-      <h3>${studentName}</h3>
-    `;
     
       //  Display the modal
       modal.style.display = 'block';
@@ -39,8 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   
     //  🚨 Close the modal when the close button is clicked
-    closeModal.('', function () {
-      
+    closeModal.addEventListener('click', function () {
+      certificateContent.textContent = ''; // Remove certificate content
+      modal.style.display = 'none'; // Hide the modal on close
     });
   });
   
