@@ -1,42 +1,27 @@
+### INNRAN532_BCL2401_GroupB_InnocentRangaka_JSL07
+
 # [JSL07] Submission: Proud of your Progress
 
-Create a personalized certificate of achievement with the "Proud of Your Progress Certificate Generator". This web application requires users to input their name, a personalized message, and the course name to dynamically generate a certificate displayed in a modal.
+This project allows users to generate personalized certificates of achievement through a form. Upon submission, the certificate displays in a modal window.
 
-## Steps for Submission
-1. **Clone Starter Code:** Begin by cloning the Starter Code Repository from [GitHub](https://github.com/CodeSpace-Academy/Module_7_StudentNo_Classcode_Group_Name-Surname_JSL07).
-2. **Develop Your Solution:** Write your code to implement the project's functionality.
-3. **Commit Your Changes:** As you make progress, commit your changes with meaningful messages.
-4. **Push to GitHub:** Upload your local repository changes to GitHub.
-5. **Submit Your Work:** Share your GitHub Repository Link on the LMS under the [JSL07] Submission Project Tab.
+## Features:
 
-## Project Features
-- **Input Fields:** For user's name, personalized message, and course name.
-- **Generate Certificate:** A button that when clicked, creates the certificate.
-- **Modal Display:** The certificate is shown in a modal window.
-- **Close Button:** For closing the modal.
-- **Validation:** Checks that all fields are completed before certificate generation.
+Input Fields: Capture user's name, personalized message, and course name.
+Certificate Generation: Creates a certificate with user-provided information.
+Modal Display: Shows the generated certificate in a modal window.
+Close Button: Allows users to close the modal window.
+Validation: Ensures all form fields are filled before certificate generation.
+Course Name Handling: Automatically appends "Course" if the user-provided course name doesn't already include it.
 
-## Development Objectives
-- **Dynamic Content:** Dynamically generate the certificate's content based on user input, ensuring it matches the reference solution.
-- **Modal Implementation:** Show the certificate in a modal upon form submission; the modal should initially be hidden.
-- **Interaction Handling:** Enable modal display with form submission and allow closing with a close button. Ensure form inputs are cleared post-submission.
+## Implementation:
 
-## Addressing Starter Code Challenges 🪲
-Your tasks include completing partially implemented input collection, dynamically generating certificate content, and implementing modal display and interaction handling based on the provided starter code framework.
+Form Submission: Listens for form submissions and prevents default behavior.
+Input Values: Retrieves user input from designated form elements.
+Certificate Content Generation: Dynamically builds the certificate content using a template string, incorporating user input and predefined text.
+Modal Handling: Controls the visibility of the modal window based on form submission and close button interaction.
+Input Clearing: Resets the form input fields after successful certificate generation.
+Modal Content Clearing: Removes the certificate content from the modal window upon closing.
 
-Partial implementation for collecting input values, where specific assignments are marked with 🚨, indicating tasks to complete.
+## Code Structure:
 
-## How to Proceed
-1. **Clone the Repository:** Use the provided [link](https://github.com/CodeSpace-Academy/Module_7_StudentNo_Classcode_Group_Name-Surname_JSL07) to clone the repository and start working in your local environment.
-2. **Code:** Address each challenge following the project objectives and features.
-3. **Commit Changes:** Regularly commit your work with descriptive messages.
-4. **Push Updates:** Upload your commits to GitHub, ensuring your repository reflects the latest changes.
-5. **Verify Submission:** Double-check your GitHub repository for the final code and push any last-minute updates.
-
-## Evaluation Criteria
-- **Code Review:** We'll check your repository for the complete and updated code files.
-- **Functionality:** Your modifications will be assessed for adherence to project requirements.
-- **Commit History:** Your commit messages and history will reflect your development process.
-
-Get going and celebrate your progress 🥳🥳🥳
-
+The code utilizes an event listener for DOMContentLoaded to ensure elements are loaded before script execution. It defines variables for form elements, the modal, certificate content container, and the close button. The code implements the functionalities described above using event listeners and DOM manipulation techniques.
