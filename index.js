@@ -21,6 +21,20 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Please fill in all fields');
         return;
       }
+
+      const nameWithCourseWord = (courseName.toLowerCase().includes('course'))? courseName : `${courseName} Course`;
+  
+      // 🚨 Generate certificate content dynamically
+      certificateContent.innerHTML = `
+        <h2>Certificate of Achievement</h2>
+        <p>This is to certify that</p>
+        <h3>${studentName}</h3>
+        <p>has almost completed the</p>
+        <h3>${nameWithCourseWord}</h3>
+        <p>with legendary preseverance and world-class bad-assery for never giving up 🏆</p>
+        <img src="./logo.png" alt="CodeSpace Logo" width="350">
+        <p>${personalMessage} </p>
+      `;
     
       //  Display the modal
       modal.style.display = 'block';
